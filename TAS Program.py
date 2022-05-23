@@ -1,6 +1,6 @@
 from kivymd.app import MDApp
 from kivy.uix.screenmanager import ScreenManager
-from Introduction import *
+# from Introduction import *
 
 
 class LandingPage(MDScreen):
@@ -14,10 +14,13 @@ class PythonCore(MDScreen):
 screen_manager = ScreenManager()
 screen_manager.add_widget(LandingPage(name="LandingPage"))
 screen_manager.add_widget(PythonCore(name="PythonCore"))
+
+'''
 screen_manager.add_widget(Welcome(name="Welcome"))
 screen_manager.add_widget(WhatIsProgramming(name="WhatIsProgramming"))
 screen_manager.add_widget(HistoryOfProgramming(name="HistoryOfProgramming"))
 screen_manager.add_widget(GenerationsOfProgramming(name="GenerationsOfProgramming"))
+'''
 
 
 class TASProgramApp(MDApp):
