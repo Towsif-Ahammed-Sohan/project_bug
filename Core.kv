@@ -1,0 +1,119 @@
+<LandingPage>:
+    md_bg_color:217/255,3/255,3/255,.65
+    MDBoxLayout:
+        orientation:'vertical'
+        MDBoxLayout:
+            size_hint_y:.25
+            padding:dp(25)
+            MDBoxLayout:
+                orientation:"vertical"
+                MDLabel:
+                    text:"TAS Program"
+                    font_style:"H4"
+                    halign: "center"
+                    bold: True
+            MDIconButton:
+                icon: "Img/setting.png"
+        ScrollView:
+            scroll_timeout : 100
+            MDGridLayout:
+                size_hint_y: .75
+                cols: 2
+                padding: [dp(15), dp(15), dp(15), dp(15)]
+                spacing: dp(15)
+                ElementCard:
+                    image: "Img/Intro.png"
+                    text: "Introduction to Programming"
+                    subtext: "Introduction to Programming"
+                    items_count: " "
+                ElementCard:
+                    image: "Img/python.png"
+                    text: "Python Core"
+                    subtext: "Python core or very basic lessons. It will help you to gain the basic knowledge of python."
+                    items_count: ""
+                    action: "PythonCore"
+
+
+
+<PythonCore>:
+    md_bg_color:217/255,3/255,3/255,.65
+    MDBoxLayout:
+        orientation:'vertical'
+        MDBoxLayout:
+            size_hint_y:.25
+            padding:dp(25)
+            MDBoxLayout:
+                orientation:"vertical"
+                MDLabel:
+                    text:"Python ore"
+                    font_style:"H4"
+                    halign: "center"
+                    bold: True
+            MDIconButton:
+                icon: "Img/setting.png"
+        ScrollView:
+            scroll_timeout : 100
+            MDGridLayout:
+                size_hint_y: .75
+                cols: 2
+                padding: [dp(15), dp(15), dp(15), dp(15)]
+                spacing: dp(15)
+                ElementCard:
+                    image: "Img/Intro.png"
+                    text: "Introduction"
+                    subtext: " "
+                    items_count: " "
+                ElementCard:
+                    image: "Img/string.png"
+                    text: "String & Variable"
+                    subtext: " "
+                    items_count: " "
+                ElementCard:
+                    image: "Img/ControlStructures.png"
+                    text: "Control Structures in Python"
+                    subtext: " "
+                    items_count: " "
+                ElementCard:
+                    image: "Img/FunctionalProgramming.png"
+                    text: "Functional Programming"
+                    subtext: " "
+                    items_count: " "
+                ElementCard:
+                    image: "Img/OOP.png"
+                    text: "Object Oriented Programming"
+                    subtext: " "
+                    items_count: " "
+
+<ElementCard@MDCard>:
+    md_bg_color:217/255,3/255,3/255,0.23
+    padding:dp(15)
+    spacing:dp(15)
+    radius:dp(25)
+    image:''
+    text:""
+    items_count:""
+    subtext:''
+    ripple_behavior: True
+    action: ""
+    on_release:
+        current_screen=root.action
+    orientation:'vertical'
+    Image:
+        source:root.image
+    MDBoxLayout:
+        orientation:'vertical'
+        MDLabel:
+            halign:"center"
+            text:root.text
+            font_style:"H6"
+            bold: True
+            bold: True
+        MDLabel:
+            halign:"center"
+            font_style:"Subtitle1"
+            text:root.subtext
+            italic: True
+        MDLabel:
+            halign:"center"
+            text:root.items_count
+            font_style:"Caption"
