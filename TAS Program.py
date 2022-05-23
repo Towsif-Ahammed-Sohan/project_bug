@@ -1,10 +1,7 @@
 from kivymd.app import MDApp
 from kivy.uix.screenmanager import ScreenManager
 # from Introduction import *
-
-
-class LandingPage(MDScreen):
-    pass
+from kivymd.uix.screen import MDScreen
 
 
 class PythonCore(MDScreen):
@@ -29,11 +26,11 @@ class TASProgramApp(MDApp):
         self.title = "TAS Program"
         self.theme_cls.primary_palette = "DeepPurple"
         self.theme_cls.theme_style = "Dark"
-        self.ScreenManager = screen_manager
+        self.manager = screen_manager
         self.root = Builder.load_file("Core.kv")
 
-    def build(self):
-        return LandingPage()
+    '''def build(self):
+        return LandingPage()'''
 
 
 if __name__ == "__main__":
