@@ -1,4 +1,4 @@
-<LandingPage>:
+MDScreen:
     md_bg_color:217/255,3/255,3/255,.65
     MDBoxLayout:
         orientation:'vertical'
@@ -26,6 +26,7 @@
                     text: "Introduction to Programming"
                     subtext: "Introduction to Programming"
                     items_count: " "
+                    action: "PythonCore"
                 ElementCard:
                     image: "Img/python.png"
                     text: "Python Core"
@@ -96,7 +97,7 @@
     ripple_behavior: True
     action: ""
     on_release:
-        current_screen=root.action
+        root.manager.current=root.action
     orientation:'vertical'
     Image:
         source:root.image
