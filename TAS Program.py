@@ -9,7 +9,6 @@ class PythonCore(MDScreen):
 
 
 screen_manager = ScreenManager()
-screen_manager.add_widget(LandingPage(name="LandingPage"))
 screen_manager.add_widget(PythonCore(name="PythonCore"))
 
 '''
